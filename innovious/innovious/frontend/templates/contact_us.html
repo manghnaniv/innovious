@@ -1,0 +1,147 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<div class="contact_top">
+	<div class="container">
+	<h4>Connect With Us</h4>
+		<div class="maps">
+			<div class="map">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d387157.48595911684!2d-73.97968099999999!3d40.703312100000005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew+York%2C+NY%2C+USA!5e0!3m2!1sen!2sin!4v1421997628895"frameborder="0" style="border:0"></iframe>
+			</div>
+		</div>
+					<div class="contact-us-down">
+								<div class="col-md-6 contact-left">
+									<h5>CONTACT-INFO</h5>
+										<!-- <p>The standard chunk of Lorem Ipsum used since the 1500s is reproduced below 
+											for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum
+											 et Malorum" by Cicero are also reproduced in their exact original form, 
+											 accompanied by English versions from the 1914 translation by H. Rackham.</p> -->
+									 			<address>
+													<strong>Innovious Health Care Pvt. Ltd.<br>
+													K1-1443 Aashiyana Colony,<br>
+													Lucknow, 226 012.</strong><br>
+													Telephone: +91 99 2064 790 | 90 4444 1122 <br>
+													E-mail: <a href="mailto:support@ihcpl.com">support@ihcpl.com
+													<script cf-hash="f9e31" type="text/javascript">
+													// /* <![CDATA[ */!function(){try{var t="currentScript"in document?document.currentScript:function(){for(var t=document.getElementsByTagName("script"),e=t.length;e--;)if(t[e].getAttribute("cf-hash"))return t[e]}();if(t&&t.previousSibling){var e,r,n,i,c=t.previousSibling,a=c.getAttribute("data-cfemail");if(a){for(e="",r=parseInt(a.substr(0,2),16),n=2;a.length-n;n+=2)i=parseInt(a.substr(n,2),16)^r,e+=String.fromCharCode(i);e=document.createTextNode(e),c.parentNode.replaceChild(e,c)}}}catch(u){}}();/* ]]> */</script>
+												</a><br>
+												</address>
+								</div>
+								<div class="col-md-6 contact-us-info">
+											<!-- <form id="contact_form">
+												<input type="text" name="name" value="Name" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'NAME';}" required>				
+												<input type="text" name="email" value="Email" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'EMAIL';}" required>
+												<textarea cols="70" rows="5" name="message" onfocus="this.value='';" onblur="if (this.value == '') {this.value = 'MESSAGE';}" >MESSAGE </textarea>
+												<div class="clearfix"> </div>
+												<button type="submit" id="submitButton"/>Send</button>
+												<div class="clearfix"> </div>
+											</form>	 -->
+											<form id="contact_form">
+							                    <div class="row">
+							                        <div class="col-sm-12 form-group slideanim">
+							                            <input class="form-control inp-box" id="name" name="name" placeholder="Name" type="text" required>
+							                        </div>
+							                        <div class="col-sm-12 form-group slideanim">
+							                            <input class="form-control inp-box" id="email" name="email" placeholder="Email" type="email" required>
+							                        </div>
+							                        <div class="col-sm-12 form-group slideanim">
+							                          <textarea class="form-control" id="comments" name="message" placeholder="Message" rows="5"></textarea>
+							                        </div>  
+							                    </div>
+							                    <br>
+							                    <div class="row">
+							                        <div class="col-sm-12 form-group slideanim">
+							                            <button class="btn btn-danger btn-lg" id="submitButton" type="submit">Send</button>
+							                        </div>
+							                    </div>
+							                </form> 				
+								</div>
+								<div class="clearfix"> </div>
+					</div>
+        </div>	
+  </div>	
+  {% endblock %}
+  <!-- modals starts-->
+  	<div id="successModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	     <!--  <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Modal Header</h4>
+	      </div> -->
+	      <div class="modal-body">
+	        <p>Message sent successfully.</p>
+	      </div>
+	      <!-- <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div> -->
+	    </div>
+
+	  </div>
+	</div>
+	<div id="failModal" class="modal fade" role="dialog">
+	  <div class="modal-dialog">
+
+	    <!-- Modal content-->
+	    <div class="modal-content">
+	     <!--  <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal">&times;</button>
+	        <h4 class="modal-title">Modal Header</h4>
+	      </div> -->
+	      <div class="modal-body">
+	        <p>Unable to send message. Please try again later</p>
+	      </div>
+	      <!-- <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div> -->
+	    </div>
+
+	  </div>
+	</div>
+	<div class="loadingmodal"><!-- Place at bottom of page --></div>
+  <!-- modals end-->
+  <script>
+  	$("#contact_form").submit(function(e){
+        $("body").addClass("loading");
+        var postData = $(this).serializeArray();
+        var formURL = $(this).attr("action");
+    $.ajax(
+    {
+        url : '<?php echo Router::url(array('controller' => 'website','action' =>'contactForm')) ?>',
+        type: "POST",
+        data : postData,
+        success:function(data, textStatus, jqXHR) 
+        {
+            $("body").removeClass("loading");
+            // console.log(data);
+            if(data=='1'){
+                $('#successModal').modal('show');
+                setTimeout(function(){ 
+                $('#successModal').modal('hide');
+                $("#contact_form").trigger('reset');
+             }, 2000);
+            }else{
+                $('#failModal').modal('show');
+                setTimeout(function(){ 
+                $('#failModal').modal('hide');
+             }, 2000);
+            }
+            //data: return data from server
+        },
+        error: function(jqXHR, textStatus, errorThrown){
+           //if fails      
+           $("body").removeClass("loading");
+           $('#failModal').modal('show');
+                setTimeout(function(){ 
+                $('#failModal').modal('hide');
+             }, 2000);
+            
+        }
+    });
+    e.preventDefault(); //STOP default action
+    // e.unbind(); //unbind. to stop multiple form submit.
+    });
+	$("#contact_form").trigger('reset');
+  </script>

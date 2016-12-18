@@ -1,0 +1,209 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+<!-- <div class="support_top">
+	<div class="container">
+		<div class="row">
+                <div class="col-sm-4 col-md-4 career-top">
+                    <div class="section-title text-left"> 
+                        <h2>Hiring! Mechanical Engineers</h2>
+                        <h5><strong>120 Available Positions</strong></h5>
+                        <hr>
+                        <p>Quisque porttitor sem libero auctor lorem fringilla sit amehasellus gravida nisi elitam egestda. Sedquis viverra enim.</p>
+                        
+                        <div id="popup">
+                            <a href="https://www.youtube.com/watch?v=L9szn1QQfas" class="read-more">Video about Life in Enhenyero <span class="fa fa-chevron-circle-right"></span></a>
+                        </div>
+                    </div>
+
+                    <div class="position-details">
+                        <h4>Position Details</h4>
+                        <br>
+                        <ul class="list-unstyled list-block">
+                            <li><strong>Location: </strong> United Kingdom Branch</li>
+                            <li><strong>Position: </strong> Senior Mechanical Engineer</li>
+                            <li><strong>Contract: </strong> 3 Years Contract</li>
+                            <li><strong>Monthly Salary: </strong> $5,000.00 - $10,000.00</li>
+                        </ul>
+                        <a href="#en-application" class="read-more">Apply Now <span class="fa fa-chevron-circle-right"></span></a>
+                    </div>
+
+                </div>
+
+                <div class="col-sm-8 col-md-8 career-top">
+                    <p class="lead">Are you interested to be part of our excellent team? Enhenyero INC. is looking for Competent Mechanical Engineers.</p>
+                    <p>Proin porta sem nisi, ut maximus erat efficitur veldere etm tempus mi. Sed sagittis malesuada laoreetem ipsumolor Lorem ipsum dolor sit amet, consectetur adipisng elit. Duis eu libero scelerisque ligula agittis faucibus eget quis lacususpendisse sodales sed orci ac feuconsectetur adipiscingituis eu libero scelerisque ligulac t neque led dolor.</p>
+
+                    <div class="clearfix"></div>
+                    <br>
+
+                    <div class="row">
+                        <div class="col-md-6 img ">
+                            <img class="img-responsive career-img" alt="" src="img/02.jpg">
+                        </div>
+                        <div class="col-md-6 img ">
+                            <img class="img-responsive career-img" alt="" src="img/03.jpg">
+                        </div>
+                    </div>
+
+                    <br>
+                    <h4>Duties and Responsibilities</h4>
+                    <ul class="list-unstyled list-block">
+                        <li><i class="fa fa-check-square"></i>Sunt in culpa qui officia deserunt mollit anim id est</li>
+                        <li><i class="fa fa-check-square"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><i class="fa fa-check-square"></i>Excepteur sint occaecat cupidatat non sunt in culpa qui.</li>
+                        <li><i class="fa fa-check-square"></i>Donec nec justo eget felis facilisis fermentum.</li>
+                        <li><i class="fa fa-check-square"></i>Mollit anim id est laborum.</li>
+                    </ul>
+
+                    <br>
+                    <h4>Requirement and Qualifications</h4>
+                    <ul class="list-unstyled list-block">
+                        <li><i class="fa fa-check-square"></i>Sunt in culpa qui officia deserunt mollit anim id est</li>
+                        <li><i class="fa fa-check-square"></i>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                        <li><i class="fa fa-check-square"></i>Excepteur sint occaecat cupidatat non sunt in culpa qui.</li>
+                        <li><i class="fa fa-check-square"></i>Donec nec justo eget felis facilisis fermentum.</li>
+                        <li><i class="fa fa-check-square"></i>Mollit anim id est laborum.</li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+	</div>
+</div> 
+ -->
+<?php echo $this->element('careerHeader') ?>
+<div class="support-bottom">
+	<div class="container">
+		<h4>Come join the most prospering and fun team in healthcare business</h4>
+		<h2>Current Openings</h2>
+		<div class="col-md-4 support-bottom-top">
+			<!-- <img src="img/c1.png" /> -->
+            <?php echo $this->Html->image("c1.png", array("alt" => "Image")) ?>
+			<div class="grid-bottom">
+				<div>
+					<h3>Executive/ Sr. Executive - Sales</h3>
+				</div>
+				
+				<!-- <p>reproduced below for those interested. Sections 1.10.32
+				  and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero form, accompanied</p> -->
+				 <a class="support-bottom-top" href="<?php echo Router::url(array('controller' => 'careers','action' =>'sales_exe')) ?>">Read More</a>
+			</div>
+		</div>
+		<div class="col-md-4 support-bottom-top">
+			<!-- <img src="img/c2.png" /> -->
+            <?php echo $this->Html->image("c2.png", array("alt" => "Image")) ?>
+			<div class="grid-bottom">
+				<div>
+					<h3>Human Resource Manager</h3>
+				</div>	
+				<!-- <p>reproduced below for those interested. Sections 1.10.32
+				  and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero form, accompanied</p> -->
+				 <a class="support-bottom-top" href="<?php echo Router::url(array('controller' => 'careers','action' =>'hr')) ?>">Read More</a>
+			</div>
+		</div>
+		<!-- <div class="col-md-4 support-bottom-top">
+            <?php echo $this->Html->image("c3.png", array("alt" => "Image")) ?>
+			<div class="grid-bottom">
+				<div>
+					<h3>Delivery Boy</h3>
+				</div>	
+				 <a class="support-bottom-top" href="<?php echo Router::url(array('controller' => 'careers','action' =>'delivery_boy')) ?>">Read More</a>
+			</div>
+		</div> -->
+
+	
+	
+		<div class="col-md-4 support-bottom-top">
+			<!-- <img src="img/c4.png" /> -->
+            <?php echo $this->Html->image("c4.png", array("alt" => "Image")) ?>
+			<div class="grid-bottom">
+				<div>
+					<h3>Receptionist</h3>
+				</div>
+				<!-- <p>reproduced below for those interested. Sections 1.10.32
+				  and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero form, accompanied</p> -->
+				 <a class="support-bottom-top" href="<?php echo Router::url(array('controller' => 'careers','action' =>'receptionist')) ?>">Read More</a>
+			</div>
+		</div>
+    </div>
+    <div class="container career-posting">
+		<div class="col-md-4 support-bottom-top">
+			<!-- <img src="img/c5.png" /> -->
+            <?php echo $this->Html->image("c5.png", array("alt" => "Image")) ?>
+			<div class="grid-bottom">
+				<div>
+					<h3>Accounts Executive</h3>
+				</div>	
+				<!-- <p>reproduced below for those interested. Sections 1.10.32
+				  and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero form, accompanied</p> -->
+				 <a class="support-bottom-top" href="<?php echo Router::url(array('controller' => 'careers','action' =>'account_executive')) ?>">Read More</a>
+			</div>
+		</div>
+	</div>	
+
+</div>		
+
+{% endblock %}
+
+
+<!-- <div class="support" id="en-application">
+	<div class="container">
+		<div class="support-info ">
+				<div class="row">
+
+            <div class="col-sm-4 col-md-4">
+                <div class="section-title text-left"> 
+                    <h2>Fill in the Form <br>to Apply</h2>
+                    <hr>
+                    <p>Are you interested to be part of our excellent team? Enhenyero INC. is looking for Competent Mechanical Engineers.</p>
+                    <br>
+                    <a href="<?php echo Router::url(array('controller' => 'website','action' =>'about_us')) ?>" class="read-more">Learn More About Us <span class="fa fa-chevron-circle-right"></span></a>
+                </div>
+            </div>
+
+            <div class="col-sm-8 col-md-8 careers">
+
+                <form class="form" id="newcatform" enctype="multipart/form-data">
+                <?php //echo $this->Form->create("application-form",array("enctype"=>"multipart/form-data","method"=>"post","id"=>"application-form"));?>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="text" name="name" placeholder="Full Name" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="email" placeholder="Email" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <input type="tel" name="mobile" placeholder="Mobile Number" class="form-control" required>
+                        </div>
+                        <div class="col-md-6">
+                            <input type="text" name="address" placeholder="Address" class="form-control" >
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputFile">Attached Resume Here</label>
+                        <?php 
+		                  echo $this->Form->file("material",array(
+		                    "label"   => FALSE,
+		                    "div"         => FALSE,
+		                    // "required",
+		                    'id'=>'exampleInputFile',
+		                    "accept"=>".doc,.docx,.pdf"
+		                    // "class"   => "form-control",
+		                    // "style" =>  "padding:0px"
+		                  ));
+		                ?>
+                        <p class="help-block">Attach .doc, .docx, .pdf files only</p>
+                    </div>
+                    <textarea placeholder="Tell Us Amazing about You..." name="msg" rows="6" class="form-control"></textarea>
+                    <input type="submit"value="SUBMIT">
+                </form>
+
+            </div>
+        </div>
+	</div>
+</div> -->

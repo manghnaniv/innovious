@@ -1,0 +1,229 @@
+<!--A Design by W3layouts
+Author: W3layout
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Innovious Health Care</title>
+<!--bootstarp-css-->
+<!-- <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" /> -->
+<!--/bootstarp-css -->
+<!--css-->
+<!-- <link rel="stylesheet" href="css/style.css" type="text/css" media="all" /> -->
+<!--/css-->
+{% comment %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Petcare Responsive web template, Bootstrap Web Templates, Flat Web Templates, Andriod Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyErricsson, Motorola web design" />
+
+<?php
+echo $this->Html->meta('favicon.ico','favicon.ico',array('type' => 'icon'));
+?>
+
+{% endcomment %}
+{% load static %}
+{{ STATIC_URL }}
+
+{% load static %}
+
+<link rel="stylesheet"  href="{% static 'frontend/css/bootstrap.css' %}"  type="text/css"/>
+<link rel="stylesheet"  href="{% static 'frontend/css/style.css' %}" type="text/css"/>
+<link rel="stylesheet" href="{% static 'frontend/css/hover.css' %}" type="text/css"  />
+<link rel="stylesheet" href="{% static 'frontend/css/font-awesome.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'frontend/css/owl.carousel.css' %}" type="text/css" />
+<link rel="stylesheet" href="{% static 'frontend/css/flexslider.css' %}" type="text/css"  />
+
+<script src="{% static 'frontend/js/jquery.min.js'%}"></script>
+<script src="{% static 'frontend/js/modernizr.custom.js'%}"></script>
+<script src="{% static 'frontend/js/bootstrap.min.js'%}"></script>
+<script src="{% static 'frontend/js/responsiveslides.min.js'%}"></script>
+<script src="{% static 'frontend/js/jquery.flexslider-min.js'%}"></script>
+<script src="{% static 'frontend/js/custom.js'%}"></script>
+
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script>
+    $(function () {
+      $("#slider2").responsiveSlides({
+        auto: true,
+        pager: true,
+        speed: 300,
+        namespace: "callbacks",
+      });
+    });
+  </script>
+</head>
+<body>
+<!--header-->
+<div class="header">
+	<div class="header-info">
+	  <div class="container">
+		<div class="logo">
+			<a href="index.html"><img src="{% static 'frontend/img/logo.png' %}" alt="" /></a>				
+		</div>
+		<!-- <div class="search-box">
+		    <form>
+		        <input type="text" name="s" class="textbox" placeholder="Search" required="">
+		        <input type="submit" value="">
+		    </form>
+		</div> -->
+		         <div class="clearfix"> </div>
+	  </div>
+	</div>
+</div>
+   <div class="container">
+	       <div class="header-bottom">
+							<div class="menu">
+								<span class="menu-info" style='diplay:none;'><b>Menu</b></span>
+								<ul class="cl-effect-21">
+									<li><a href="/" class="active">HOME</a></li>
+									<li><a href="/about_us">ABOUT</a></li>
+								 	<li  class="dropdown">
+										<a href="/products" >PRODUCTS</a>
+										<ul class="dropdown-menu drop_menu" role="menu">
+											<li>
+												<a href="/products/true_hb" >True Hb Meter</a>
+											</li>
+											<li>
+												<a href="/products/true_hb_strip" >True Hb Strip</a>
+											</li>
+											<li>
+												<a href="/products/breasti" >Breasti</a>
+											</li>
+										</ul>	
+									</li>
+									<li class="dropdown">
+										<a href="/health_areas">HEALTH AREAS</a>
+										<ul class="dropdown-menu drop_menu" role="menu">
+											<li>
+												<a href="/health_areas/anaemia">Anaemia</a>
+											</li>
+											<li>
+												<a href="/health_areas/breast_cancer">Breast Cancer</a>
+											</li>
+										</ul>		
+									</li>
+									<li><a href="/career">CAREERS</a></li>
+									<li><a href="/contact_us">CONTACT</a></li>
+									
+<!--
+									<li id='index' >
+										<?php 
+											$class = (!empty($this->params['action']) && !empty($this->params['controller'])) && (($this->params['action']=='index') && ($this->params['controller']=='website')) ? 'active' :'';	
+											echo $this->Html->link('HOME','/',array('class'=> $class));
+										?>
+									</li>	
+									<li id='about'>
+										<?php 
+											$class = !empty($this->params['action']) && ($this->params['action']=='about_us') ? 'active' :'';	
+											echo $this->Html->link('ABOUT US','/about_us',array('class'=> $class));
+										?>
+									</li>
+								 	<li id="products" class="dropdown">
+								 		<?php 
+								 			$class = !empty($this->params['controller']) && ($this->params['controller']=='products') ? 'active' :'';
+											echo $this->Html->link('PRODUCTS','/products',array('class'=>$class));
+										?>
+								 		<ul class="dropdown-menu drop_menu" role="menu">
+											<li><?php 
+													echo $this->Html->link('True Hb Meter','/true_hb');
+												?>
+											</li>
+											<li><?php 
+													echo $this->Html->link('True Hb Strip','/true_hb_strip');
+												?>
+											</li>
+										</ul>
+								 	</li>
+									<li id='support' class="dropdown">
+										<?php 
+											$class = !empty($this->params['controller']) && ($this->params['controller']=='health_areas') ? 'active' :'';
+											echo $this->Html->link('HEALTH AREAS','/health_areas',array('class'=>$class));?>
+								 		<ul class="dropdown-menu drop_menu" role="menu">
+											<li>
+												<?php 
+													echo $this->Html->link('Anaemia','/anaemia');
+												?>
+											</li>
+										</ul>
+								 	</li>
+
+									<li id='careplus'>
+										<?php 
+											$class = !empty($this->params['action']) && ($this->params['action']=='careers') ? 'active' :'';
+											echo $this->Html->link('CAREERS','/careers',array('class'=>$class));
+										?>
+									</li>
+
+									<li>
+										<?php 
+											$class = !empty($this->params['action']) && ($this->params['action']=='contact_us') ? 'active' :'';
+											echo $this->Html->link('CONTACT US','/contact_us',array('class'=> $class));?></li>
+-->
+								</ul>
+							</div>
+	
+			        <script>
+					$("span.menu-info").click(function(){
+						$("ul.cl-effect-21").slideToggle("slow" , function(){
+						});
+					});
+					</script>
+					<!-- /script-nav -->
+                    <div class="clearfix"> </div>	
+		   </div>
+  </div>
+<div id='contet'>
+{% block content %}
+{% endblock %}
+</div>
+<!--footer-->
+<div class="footer">
+	<div class="container">
+	<div class="copy-rights">
+				 <p style='display:none'>Design by<a href="http://w3layouts.com/"> W3layouts.</a></p>
+				 <p >Made by Innovious Solutions © 2016</a></p>
+			</div>
+
+	</div>
+</div>
+<!--/footer-->
+</body>
+	<script>
+    // You can also use "$(window).load(function() {"
+    $( document ).ready(function() {
+    	
+    // console.log( "ready!" );
+    
+    	// $( ".dropdown-menu.drop_menu a" ).focus(function() {
+		  // alert( "Handler for .focus() called." );
+		// });
+    	// $('span.menu-info').on('click',function(e){
+    	// 	$('ul.cl-effect-21').toggle();
+    	// 	console.log('close');
+    	// 	$(document).one('click', function closeMenu (e){
+		   //      if($('ul.cl-effect-21').has(e.target).length === 0){
+		   //          $('ul.cl-effect-21').toggle();
+		   //      } else {
+		   //          $(document).one('click', closeMenu);
+		   //      }
+		   //  });
+
+    	// });
+
+    	// $('.menu').click(function(){
+    	// 	// alert('bing');
+    	// 	$('.cl-effect-21').css('display','block');
+    	// });
+
+});
+    // $(function () {
+    //   alert("Hello");
+    //   
+    // });
+
+  </script>
+</html>
